@@ -1,5 +1,7 @@
 import math
 
+TOPE_DIARIO = 12000
+
 
 def calcular_tarifa(minutos):
 
@@ -8,4 +10,6 @@ def calcular_tarifa(minutos):
 
     horas = math.ceil((minutos - 30) / 60)
 
-    return horas * 500
+    total = horas * 500
+
+    return min(total, TOPE_DIARIO)
