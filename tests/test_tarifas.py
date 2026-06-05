@@ -18,3 +18,6 @@ def test_91_minutos_cobra_1000():
 
 def test_tope_diario():
     assert calcular_tarifa(2000) == 12000
+
+def test_descuento_vip():
+    assert calcular_tarifa(91, True) == 800
